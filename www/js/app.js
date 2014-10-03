@@ -1,11 +1,26 @@
-// Ionic Starter App
+'use strict';
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+/** Application definition
+ */
+var app = angular.module('ma-ville', ['ionic', 'pascalprecht.translate']);
 
-.run(function($ionicPlatform) {
+
+/** Application config
+ */
+app.config(['$translateProvider', function($translateProvider) {
+
+  // Internationalization
+  $translateProvider
+    .useStaticFilesLoader({ prefix: 'i18n/', suffix: '.json' })
+    .determinePreferredLanguage()
+    .fallbackLanguage(['en']);
+
+}]);
+
+
+/** kickstart the app
+ */
+app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -16,4 +31,4 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-})
+});

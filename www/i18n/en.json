@@ -1,8 +1,13 @@
 {
   "app_name": "ma-ville",
+  "user": {
+    "name"     : "Your name",
+    "email"    : "E-mail",
+    "password" : "Password"
+  },
   "actions": {
     "sign_up"  : "Sign up",
-    "log_in"   : "Sign in"
+    "sign_in"   : "Sign in"
   },
   "presentation": {
     "become_actor"              : "Become a an actor in your city",
@@ -10,5 +15,8 @@
     "information_or_suggestion" : "an information or just a suggestion",
     "collaborative"             : "Collaborative",
     "follow_incidents"          : "Follow incidents reported by other citizens"
+  },
+  "menu": {
+    "my_reports"   : "My reports"
   }
 }

@@ -1,4 +1,4 @@
-.pane {
+.with-background {
   	background-repeat    : no-repeat;
   	background-attachment: fixed;
   	background-position  : center;
@@ -10,8 +10,8 @@
 	background: rgba(0, 0, 0, 0.20);
 }
 
-.scroll, .slide-presentation {
-	height: 99.9%;
+.slide-presentation-container .scroll, .slide-presentation {
+	height: 100%;
 }
 
 .slide-presentation {

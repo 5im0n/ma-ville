@@ -1,8 +1,13 @@
 {
   "app_name": "ma-ville",
+  "user": {
+    "name"     : "Votre nom",
+    "email"    : "E-mail",
+    "password" : "Mot de passe"
+  },
   "actions": {
     "sign_up"  : "Créer un compte",
-    "log_in"   : "Connexion"
+    "sign_in"  : "Connexion"
   },
   "presentation": {
     "become_actor"              : "Devenez acteur dans votre ville",
@@ -10,5 +15,8 @@
     "information_or_suggestion" : "une information ou simplement une suggestion",
     "collaborative"             : "Collaboratif",
     "follow_incidents"          : "Suivez les incidents signalés par les autres citoyens"
+  },
+  "menu": {
+    "my_reports"   : "Mes incidents"
   }
 }

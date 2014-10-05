@@ -1,0 +1,21 @@
+<ion-view class="with-background" title="{{'menu.my_reports' | translate}}" hide-back-button="true">
+
+  <!-- Header bar -->
+  <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+  </ion-nav-buttons>
+
+  <!-- Content -->
+  <ion-content>
+    <div class="list">
+
+      <a class="item item-thumbnail-left" ng-href="#/my-reports/{{report.id}}" ng-repeat="report in reports">
+        <img ng-src="{{report.img}}">
+        <h2>{{report.name}}</h2>
+        <p>{{report.description}}</p>
+      </a>
+
+    </div>
+  </ion-content>
+
+</ion-view>

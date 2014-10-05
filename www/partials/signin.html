@@ -1,0 +1,26 @@
+<ion-view class="with-background" title="{{'actions.sign_in' | translate}}">
+
+  <!-- Content -->
+  <ion-content class="padding">
+
+    <div class="text-center">
+      <img src="img/presentation/1.png">
+    </div>
+
+    <form role="form" ng-submit="signIn()">
+      <div class="list">
+        <label class="item item-input">
+          <input type="email" placeholder="{{'user.email' | translate}}" ng-model="user.email" required>
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="{{'user.password' | translate}}" ng-model="user.password" required>
+        </label>
+      </div>
+
+      <button class="button button-block button-positive" type="submit">{{'actions.sign_in' | translate}}</button>
+
+    </form>
+
+
+	</ion-content>
+</ion-view>

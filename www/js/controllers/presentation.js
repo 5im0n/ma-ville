@@ -5,28 +5,28 @@
 app.controller('PresentationCtrl', ['$scope', '$translate', '$ionicSlideBoxDelegate', function($scope, $translate, $ionicSlideBoxDelegate) {
 
   $translate([
-    'app_name',
-    'presentation.become_actor',
-    'presentation.report_incidents',
-    'presentation.information_or_suggestion',
+    'appName',
+    'presentation.becomeActor',
+    'presentation.reportIncidents',
+    'presentation.informationOrSuggestion',
     'presentation.collaborative',
-    'presentation.follow_incidents'
+    'presentation.followIncidents'
   ]).then(function(tr) {
 
     $scope.slides = [
       {
-        title    : tr['app_name'],
-        subtitle : tr['presentation.become_actor'],
+        title    : tr.appName,
+        subtitle : tr['presentation.becomeActor'],
         img      : 'img/presentation/1.png'
       },
       {
-        title    : tr['presentation.report_incidents'],
-        subtitle : tr['presentation.information_or_suggestion'],
+        title    : tr['presentation.reportIncidents'],
+        subtitle : tr['presentation.informationOrSuggestion'],
         img      : 'img/presentation/2.png'
       },
       {
         title    : tr['presentation.collaborative'],
-        subtitle : tr['presentation.follow_incidents'],
+        subtitle : tr['presentation.followIncidents'],
         img      : 'img/presentation/3.png'
       }
     ];

@@ -1,0 +1,20 @@
+{
+  "globalstrict"  : true,
+  "unused"        : true,
+  "undef"         : true,
+  "noempty"       : true,
+  "freeze"        : true,
+  "curly"         : true,
+  "latedef"       : true,
+  "maxcomplexity" : 15,
+  "trailing"      : true,
+  "devel"         : true,
+  "multistr"      : true,
+  "browser"       : true,
+  "globals" : {
+    "module"  : true,
+    "require" : true,
+    "angular" : true,
+    "app"     : true
+  }
+}

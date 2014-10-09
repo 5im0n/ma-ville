@@ -1,22 +1,22 @@
 {
-  "app_name": "ma-ville",
+  "appName": "ma-ville",
   "user": {
     "name"     : "Your name",
     "email"    : "E-mail",
     "password" : "Password"
   },
   "actions": {
-    "sign_up"  : "Sign up",
-    "sign_in"   : "Sign in"
+    "signUp" : "Sign up",
+    "signIn" : "Sign in"
   },
   "presentation": {
-    "become_actor"              : "Become a an actor in your city",
-    "report_incidents"          : "Report incidents",
-    "information_or_suggestion" : "an information or just a suggestion",
-    "collaborative"             : "Collaborative",
-    "follow_incidents"          : "Follow incidents reported by other citizens"
+    "becomeActor"             : "Become a an actor in your city",
+    "reportIncidents"         : "Report incidents",
+    "informationOrSuggestion" : "an information or just a suggestion",
+    "collaborative"           : "Collaborative",
+    "followIncidents"         : "Follow incidents reported by other citizens"
   },
   "menu": {
-    "my_reports"   : "My reports"
+    "myReports"   : "My reports"
   }
 }

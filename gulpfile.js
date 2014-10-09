@@ -6,9 +6,12 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var jshint = require('gulp-jshint');
+var jscs = require('gulp-jscs');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/**/*.scss'],
+  js  : ['./www/js/**/*.js']
 };
 
 gulp.task('default', ['sass']);
@@ -48,3 +51,23 @@ gulp.task('git-check', function(done) {
   }
   done();
 });
+
+
+/** JSHint tasks
+ */
+gulp.task('jshint', function() {
+  return gulp.src(paths.js)
+    .pipe(jshint('www/gulp/.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'));
+});
+
+/** JSCS
+ */
+gulp.task('jscs', function() {
+  return gulp.src(paths.js)
+    .pipe(jscs('www/gulp/.jscsrc'));
+});
+
+/** Check code
+ */
+gulp.task('check-code', ['jshint', 'jscs']);

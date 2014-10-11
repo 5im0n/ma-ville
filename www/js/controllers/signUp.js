@@ -8,7 +8,8 @@ app.controller('SignUpCtrl', ['$state', '$scope', function($state, $scope) {
 
   // User
   var defaultUser = { name: '', email: '', password: '' };
-  this.user = angular.copy(defaultUser);
+  angular.copy(defaultUser, this.user);
+
 
 
   /** Sign up
@@ -30,7 +31,7 @@ app.controller('SignUpCtrl', ['$state', '$scope', function($state, $scope) {
   function closeModalAndResetForm() {
     $scope.presentation.modalSignUp.hide().then(function() {
       self.signUpForm.$setPristine();
-      self.user = defaultUser;
+      angular.copy(defaultUser, self.user);
     });
   }
 

@@ -7,19 +7,19 @@ app.controller('SignInCtrl', ['$state', '$scope', function($state, $scope) {
   var self = this;
 
   // User
-  var defaultUser = { name: '', email: '' };
-  this.user = angular.copy(defaultUser);
+  this.user = {};
+  var defaultUser = { email: '', password: '' };
+  angular.copy(defaultUser, this.user);
 
   // TODO delete
   this.user.email = 'simon@gmail.com';
   this.user.password = 'simon';
 
 
-
   /** Sign in
    */
   this.signIn = function() {
-    if (self.user.email === 'simon@gmail.com' && self.user.password === 'simon') {
+    if (angular.equals(self.user.email, 'simon@gmail.com') && angular.equals(self.user.password, 'simon')) {
       console.log('OK login');
       resetFormAndNavigateToHomePage();
     }
@@ -41,7 +41,7 @@ app.controller('SignInCtrl', ['$state', '$scope', function($state, $scope) {
   function closeModalAndResetForm() {
     $scope.presentation.modalSignIn.hide().then(function() {
       self.signInForm.$setPristine();
-      self.user = defaultUser;
+      angular.copy(defaultUser, self.user);
     });
   }
 
@@ -51,7 +51,7 @@ app.controller('SignInCtrl', ['$state', '$scope', function($state, $scope) {
   function resetFormAndNavigateToHomePage() {
     self.signInForm.$setPristine();
     $state.go('app.myReports');
-    self.user = defaultUser;
+    angular.copy(defaultUser, self.user);
   }
 
 

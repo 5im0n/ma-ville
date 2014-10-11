@@ -19,17 +19,17 @@ app.controller('PresentationCtrl', ['$scope', '$translate', '$ionicSlideBoxDeleg
       {
         title    : tr.appName,
         subtitle : tr['presentation.becomeActor'],
-        img      : 'img/logo-nantes.png'
+        img      : 'img/logos/blue.png'
       },
       {
         title    : tr['presentation.reportIncidents'],
         subtitle : tr['presentation.informationOrSuggestion'],
-        img      : 'img/presentation/2.png'
+        img      : 'img/logos/yellow.png'
       },
       {
         title    : tr['presentation.collaborative'],
         subtitle : tr['presentation.followIncidents'],
-        img      : 'img/presentation/3.png'
+        img      : 'img/logos/green.png'
       }
     ];
 

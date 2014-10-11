@@ -1,26 +1,30 @@
-<ion-modal-view class="calm-bg" ng-controller="SignInCtrl as signIn">
+<ion-modal-view class="castle-bg" ng-controller="SignInCtrl as signIn">
 
   <!-- Content -->
-  <ion-content class="padding">
+  <ion-content class="padding padding-top-5">
 
-    <div class="text-center">
-      <img src="img/logo-nantes.png">
+    <div class="text-center padding-bottom">
+      <img src="img/logos/yellow.png">
     </div>
 
-    <form name="signIn.signInForm" role="form" ng-submit="signIn.signIn()">
-      <div class="list">
-        <label class="item item-input">
-          <input type="email" placeholder="{{'user.email' | translate}}" ng-model="signIn.user.email" required>
-        </label>
-        <label class="item item-input">
-          <input type="password" placeholder="{{'user.password' | translate}}" ng-model="signIn.user.password" required>
-        </label>
-      </div>
+    <!-- Sign in form -->
+    <form class="card" name="signIn.signInForm" role="form" ng-submit="signIn.signIn()">
 
-      <div class="row">
+      <div class="item item-divider text-center">{{'actions.signIn' | translate}}</div>
+
+      <label class="item item-input">
+        <input type="email" placeholder="{{'user.email' | translate}}" ng-model="signIn.user.email" required>
+      </label>
+
+      <label class="item item-input">
+        <input type="password" placeholder="{{'user.password' | translate}}" ng-model="signIn.user.password" required>
+      </label>
+
+      <div class="item row padding">
         <button class="col button button-clear button-assertive" type="button" ng-click="signIn.closeModal()">{{'actions.cancel' | translate}}</button>
         <button class="col button button-positive" type="submit">{{'actions.signIn' | translate}}</button>
       </div>
+
     </form>
 
 	</ion-content>

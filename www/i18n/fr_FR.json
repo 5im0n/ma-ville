@@ -7,7 +7,8 @@
   },
   "actions": {
     "signUp" : "Créer un compte",
-    "signIn" : "Connexion"
+    "signIn" : "Connexion",
+    "cancel" : "Annuler"
   },
   "presentation": {
     "becomeActor"             : "Devenez acteur dans votre ville",
@@ -17,6 +18,10 @@
     "followIncidents"         : "Suivez les incidents signalés par les autres citoyens"
   },
   "menu": {
-    "myReports"   : "Mes incidents"
+    "myReports"   : "Mes incidents",
+    "myAccount"   : "Mon compte",
+    "settings"    : "Paramètres",
+    "map"         : "Carte",
+    "elected"     : "Élus"
   }
 }

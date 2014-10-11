@@ -19,25 +19,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', functi
       controller: 'AppCtrl'
     })
 
-    .state('app.presentation', {
-      url: '/presentation',
-      views: {
-        viewContent: { templateUrl: 'partials/presentation-slide.html', controller: 'PresentationCtrl' }
-      }
-    })
-
-    .state('app.signin', {
-      url: '/signin',
-      views: {
-        viewContent: { templateUrl: 'partials/sign-in.html', controller: 'LoginCtrl' }
-      }
-    })
-
-    .state('app.signup', {
-      url: '/signup',
-      views: {
-        viewContent: { templateUrl: 'partials/sign-up.html', controller: 'LoginCtrl' }
-      }
+    .state('presentation', {
+      url         : '/presentation',
+      templateUrl : 'partials/presentation-slide.html',
+      controller  : 'PresentationCtrl as presentation'
     })
 
     .state('app.myReports', {
@@ -48,7 +33,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', functi
     });
 
   // For unmatch url
-  $urlRouterProvider.otherwise('/app/presentation');
+  $urlRouterProvider.otherwise('/presentation');
 
 
   // Internationalization

@@ -1,0 +1,32 @@
+<ion-modal-view class="calm-bg" ng-controller="SignUpCtrl as signUp">
+
+  <!-- Content -->
+  <ion-content class="padding">
+
+    <div class="text-center">
+      <img src="img/logo-nantes.png">
+    </div>
+
+    <form name="signUp.signUpForm" role="form" ng-submit="signUp.signUp()">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="{{'user.name' | translate}}" ng-model="signUp.user.name" required>
+        </label>
+        <label class="item item-input">
+          <input type="email" placeholder="{{'user.email' | translate}}" ng-model="signUp.user.email" required>
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="{{'user.password' | translate}}" ng-model="signUp.user.password" required>
+        </label>
+      </div>
+
+      <div class="row">
+        <button class="col button button-clear button-assertive" type="button" ng-click="signUp.closeModal()">{{'actions.cancel' | translate}}</button>
+        <button class="col button button-positive" type="submit" ng-disabled="true">{{'actions.signUp' | translate}}</button>
+      </div>
+
+    </form>
+
+
+  </ion-content>
+</ion-modal-view>

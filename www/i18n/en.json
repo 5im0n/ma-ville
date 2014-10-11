@@ -7,7 +7,8 @@
   },
   "actions": {
     "signUp" : "Sign up",
-    "signIn" : "Sign in"
+    "signIn" : "Sign in",
+    "cancel" : "Cancel"
   },
   "presentation": {
     "becomeActor"             : "Become a an actor in your city",
@@ -17,6 +18,10 @@
     "followIncidents"         : "Follow incidents reported by other citizens"
   },
   "menu": {
-    "myReports"   : "My reports"
+    "myReports"   : "Mes incidents",
+    "myAccount"   : "Mon account",
+    "settings"    : "Settings",
+    "map"         : "Map",
+    "elected"     : "Elected"
   }
 }

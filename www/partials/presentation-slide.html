@@ -1,11 +1,11 @@
-<ion-view class="with-background" hide-nav-bar="true">
+<ion-view class="city-bg">
 
   <!-- Content -->
   <ion-content class="slide-presentation-container" scrollbar-y="false">
 
-    <ion-slide-box class="slide-presentation">
+    <ion-slide-box class="slide-presentation text-center">
 
-      <ion-slide class="center" ng-repeat="slide in slides">
+      <ion-slide class="center" ng-repeat="slide in presentation.slides">
         <div class="padding-horizontal row responsive-sm">
           <div class="col">
             <img ng-src="{{slide.img}}">
@@ -24,8 +24,8 @@
   <!-- Footer bar -->
   <ion-footer-bar class="bar-translucid">
     <div class="button-bar">
-      <a href="#/app/signup" class="button button-positive">{{'actions.signUp' | translate}}</a>
-      <a href="#/app/signin" class="button button-assertive">{{'actions.signIn' | translate}}</a>
+      <a class="button button-positive" ng-click="presentation.signUpModal()">{{'actions.signUp' | translate}}</a>
+      <a class="button button-assertive" ng-click="presentation.signInModal()">{{'actions.signIn' | translate}}</a>
     </div>
   </ion-footer-bar>
 

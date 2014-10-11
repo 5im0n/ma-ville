@@ -1,21 +1,24 @@
-.with-background {
+/** Background city
+ */
+.city-bg {
   	background-repeat    : no-repeat;
-  	background-attachment: fixed;
   	background-position  : center;
   	background-size      : cover;
   	background-image     : url(../img/city_wallpaper.jpg);
 }
 
-.bar-translucid {
-	background: rgba(0, 0, 0, 0.20);
-}
 
-.slide-presentation-container .scroll, .slide-presentation {
-	height: 100%;
+/** Translucid bar
+ */
+.bar-translucid {
+    background: rgba(0, 0, 0, 0.20);
 }
 
 .slide-presentation {
-	text-align: center;
+  height: 100%;
+}
+.slide-presentation-container .scroll{
+  height: 100%;
 }
 
 .slide-presentation img{

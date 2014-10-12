@@ -12,4 +12,12 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+
+  <platform name="android">
+    <icon src="www/res/icons/android/ic_launcher_mdpi.png" density="mdpi" />
+    <icon src="www/res/icons/android/ic_launcher_hdpi.png" density="hdpi" />
+    <icon src="www/res/icons/android/ic_launcher_xhdpi.png" density="xhdpi" />
+    <icon src="www/res/icons/android/ic_launcher_xxhdpi.png" density="xhdpi" />
+  </platform>
+
 </widget>

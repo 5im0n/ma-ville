@@ -2,7 +2,7 @@
 
 /** Sign-in controller
  */
-app.controller('SignInCtrl', ['$state', '$scope', function($state, $scope) {
+app.controller('SignInCtrl', ['$state', '$scope', '$ionicViewService', function($state, $scope, $ionicViewService) {
 
   var self = this;
 
@@ -50,8 +50,12 @@ app.controller('SignInCtrl', ['$state', '$scope', function($state, $scope) {
    */
   function resetFormAndNavigateToHomePage() {
     self.signInForm.$setPristine();
-    $state.go('app.myReports');
-    angular.copy(defaultUser, self.user);
+
+    $state.go('app.myReports').then(function() {
+      $ionicViewService.clearHistory();
+      angular.copy(defaultUser, self.user);
+    });
+
   }
 
 

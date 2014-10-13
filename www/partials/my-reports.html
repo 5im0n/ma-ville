@@ -9,13 +9,16 @@
   <ion-content>
     <div class="list">
 
-      <a class="item item-thumbnail-left" ng-href="#/my-reports/{{report.id}}" ng-repeat="report in reports">
+      <a class="item item-thumbnail-left" ng-href="#/my-reports/{{report.id}}" ng-repeat="report in myReports.reports">
         <img ng-src="{{report.img}}">
-        <h2>{{report.name}}</h2>
+        <h2>{{report.label}}</h2>
         <p>{{report.description}}</p>
       </a>
 
     </div>
+
   </ion-content>
+
+  <a class="button button-positive button-large button-circle button-fab icon ion-plus-round" href="#/app/new-report"></a>
 
 </ion-view>

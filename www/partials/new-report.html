@@ -1,0 +1,33 @@
+<ion-view title="{{'actions.newReport' | translate}}">
+
+  <!-- Content -->
+  <ion-content>
+
+    <!-- New report form -->
+    <form class="card" role="form">
+
+      <label class="item item-input">
+        <input type="text" placeholder="{{'report.label' | translate}}" ng-model="newReport.report.label" required>
+      </label>
+
+      <label class="item item-input">
+        <textarea placeholder="{{'report.description' | translate}}" rows="5" ng-model="newReport.report.description" required></textarea>
+      </label>
+
+      <label class="item row">
+        <div class="col center">
+          <button class="button button-large icon ion-camera" ng-click="newReport.takePicture()"></button>
+        </div>
+
+        <div class="col">
+          <img ng-show="newReport.lastPhoto" ng-src="{{newReport.lastPhoto}}">
+        </div>
+      </label>
+
+    </form>
+
+    <button class="button button-full button-positive" type="submit" ng-click="newReport.newReport()">{{'actions.send' | translate}}</button>
+
+  </ion-content>
+
+</ion-view>

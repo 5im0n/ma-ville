@@ -6,9 +6,11 @@
     "password" : "Mot de passe"
   },
   "actions": {
-    "signUp" : "Créer un compte",
-    "signIn" : "Connexion",
-    "cancel" : "Annuler"
+    "signUp"    : "Créer un compte",
+    "signIn"    : "Connexion",
+    "cancel"    : "Annuler",
+    "newReport" : "Déclaration d'incident",
+    "send"      : "Envoyer"
   },
   "presentation": {
     "becomeActor"             : "Devenez acteur dans votre ville",
@@ -22,6 +24,11 @@
     "myAccount"   : "Mon compte",
     "settings"    : "Paramètres",
     "map"         : "Carte",
-    "elected"     : "Élus"
+    "elected"     : "Élus",
+    "townHall"    : "Mairie"
+  },
+  "report": {
+    "label"       : "Libellé",
+    "description" : "Description"
   }
 }

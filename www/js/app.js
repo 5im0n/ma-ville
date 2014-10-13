@@ -2,7 +2,7 @@
 
 /** Application definition
  */
-var app = angular.module('ma-ville', ['ionic', 'pascalprecht.translate']);
+var app = angular.module('ma-ville', ['ionic', 'pascalprecht.translate', 'ngCordova']);
 
 
 /** Application configuration
@@ -13,10 +13,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', functi
   // App States
   $stateProvider
     .state('app', {
-      url: '/app',
-      abstract: true,
-      templateUrl: 'partials/menus/side-menu.html',
-      controller: 'AppCtrl'
+      url         : '/app',
+      abstract    : true,
+      templateUrl : 'partials/menus/side-menu.html',
+      controller  : 'AppCtrl as app'
     })
 
     .state('presentation', {
@@ -28,7 +28,20 @@ app.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', functi
     .state('app.myReports', {
       url: '/my-reports',
       views: {
-        viewContent: { templateUrl: 'partials/my-reports.html', controller: 'MyReportsCtrl' }
+        viewContent: {
+          templateUrl : 'partials/my-reports.html',
+          controller  : 'MyReportsCtrl as myReports'
+        }
+      }
+    })
+
+    .state('app.newReport', {
+      url: '/new-report',
+      views: {
+        viewContent: {
+          templateUrl : 'partials/new-report.html',
+          controller  : 'NewReportCtrl as newReport'
+        }
       }
     });
 

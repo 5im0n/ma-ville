@@ -22,6 +22,7 @@
     "myAccount"   : "Mon account",
     "settings"    : "Settings",
     "map"         : "Map",
-    "elected"     : "Elected"
+    "elected"     : "Elected",
+    "townHall"    : "Mairie"
   }
 }

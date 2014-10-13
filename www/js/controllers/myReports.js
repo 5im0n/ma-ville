@@ -4,13 +4,12 @@
  */
 app.controller('MyReportsCtrl', ['$scope', function($scope) {
 
-  var sample = [
-    { id: 1, name: 'The name', description: 'The lorem ipsuem est une tres longue phrase', img: 'img/logos/blue.png' },
-    { id: 2, name: 'The name', description: 'The description', img: 'img/logos/blue.png' },
-    { id: 3, name: 'The name', description: 'The description', img: 'img/logos/green.png' },
-    { id: 4, name: 'The name', description: 'The description', img: 'img/logos/yellow.png' }
-  ];
+  /*var sample = [
+    { id: 1, name: 'Arbre couché sur le trottoir', description: 'Trottoir edommagé', img: 'img/reports/tree_s.jpg' },
+    { id: 2, name: 'Dépot sauvage d\'ordure', description: 'Pneus, frigidaire, chaises, tables...', img: 'img/reports/trash_s.jpg' },
+    { id: 3, name: 'Nid de frelons', description: 'Nid de frelons asiatiques d\'environ 60cm de diamètre', img: 'img/reports/hornet_s.jpg' }
+  ];*/
 
-  $scope.reports = sample;
+  this.reports = $scope.app.rootReports;
 
 }]);

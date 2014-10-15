@@ -1,3 +1,8 @@
+/*!
+ * ma-ville
+ * Copyright 2014 Simon MAHÉ <mahe.simon@gmail.com>
+ * Licensed under AGPL-3.0 (https://www.gnu.org/licenses/agpl.txt)
+ */
 'use strict';
 
 /** Application definition
@@ -41,6 +46,42 @@ app.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', functi
         viewContent: {
           templateUrl : 'partials/new-report.html',
           controller  : 'NewReportCtrl as newReport'
+        }
+      }
+    })
+
+    .state('app.settings', {
+      url: '/settings',
+      views: {
+        viewContent: {
+          templateUrl : 'partials/settings.html'
+        }
+      }
+    })
+
+    .state('app.townHall', {
+      url: '/town-hall',
+      views: {
+        viewContent: {
+          templateUrl : 'partials/town-hall.html'
+        }
+      }
+    })
+
+    .state('app.Elected', {
+      url: '/elected',
+      views: {
+        viewContent: {
+          templateUrl : 'partials/elected.html'
+        }
+      }
+    })
+
+    .state('app.maps', {
+      url: '/maps',
+      views: {
+        viewContent: {
+          templateUrl : 'partials/maps.html'
         }
       }
     });
